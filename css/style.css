@@ -45,11 +45,16 @@ header {
   border-bottom: #e8491d 3px solid;
 }
 
-header a {
+header nav a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 header li {
@@ -74,6 +79,10 @@ header nav {
 header .highlight, header .current a {
   color: #e8491d;
   font-weight: bold;
+}
+
+header .white {
+  color: #fff;
 }
 
 header a:hover {
@@ -127,8 +136,6 @@ header a:hover {
 /* Cards */
 #cards {
   margin-top:  20px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -139,6 +146,7 @@ header a:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   padding: 15px;
+  width: 20%;
 }
 
 #cards .card img {
@@ -149,11 +157,6 @@ header a:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-#card-col {
-  float: left;
-  width: 25%;
-  min-width: 250px;
-}
 
 /* Sidebar */
 aside#sidebar {
@@ -200,11 +203,16 @@ footer {
   #newsletter form,
   #cards .card,
   article#main-col,
-  aside#sidebar,
-  #card-col {
+  aside#sidebar {
     float: none;
     text-align: center;
     width: 100%;
+  }
+
+  #cards .card {
+    float: none;
+    text-align: center;
+    width: 85%;
   }
 
   header{
@@ -226,13 +234,4 @@ footer {
   }
 
 
-}
-
-@media (max-width: 1300px) and (min-width: 769) {
-  #card-col {
-    float: cemter;
-    text-align: center;
-    width: 50%;
-    min-width: 50%;
-  }
 }

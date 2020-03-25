@@ -5,7 +5,20 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f4f4f4;
+  -ms-overflow-style: none;
+  position: relative;
+  min-height: 100vh;
 }
+
+.content {
+  padding-bottom: 2.5rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* Global */
 .container {
@@ -43,6 +56,9 @@ header {
   padding-top: 30px;
   min-height: 70px;
   border-bottom: #e8491d 3px solid;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 header nav a {
@@ -50,6 +66,7 @@ header nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
+  font-weight: bold;
 }
 
 header a {
@@ -93,16 +110,17 @@ header a:hover {
 /* Showcase */
 #showcase {
   min-height: 400px;
-  background:URL('../img/bg3.jpg');
+  background:URL('../img/bg4.jpg');
   text-align: center;
   color: #fff;
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: 0% 70%;
+  background-position: 0% 90%;
+  height: 60vh;
 }
 
 #showcase h1 {
-  margin-top:  100px;
+  margin-top:  10%;
   font-size: 55px;
   margin-bottom:  10px;
 }
@@ -111,11 +129,16 @@ header a:hover {
   font-size: 20px;
 }
 
+/* show case interactive */
+
+
+
 /* Newsletter */
 #newsletter {
-  padding: 15px;
+  padding: 15px 25% 15px 25%;
   color: #fff;
   background: #35424a;
+
 }
 
 #newsletter h1 {
@@ -133,20 +156,37 @@ header a:hover {
   width: 250px;
 }
 
+/* openCards */
+#openCards {
+  padding: 15px 25% 15px 25%;
+  color: #fff;
+  background: #35424a;
+
+}
+
+#openCards h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
 /* Cards */
 #cards {
   margin-top:  20px;
   justify-content: space-between;
+  display: none;
 }
 
 #cards .card {
   float: left;
   text-align: center;
-  margin: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
-  padding: 15px;
-  width: 20%;
+  /* padding: 15px; */
+  width: 21%;
+  padding: 1%;
 }
 
 #cards .card img {
@@ -154,9 +194,32 @@ header a:hover {
 }
 
 #cards .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }
 
+/* feature */
+
+#feature_wrapper {
+    display: none;
+}
+
+#feature {
+  margin: 1%;
+  padding: 15px 50px 15px 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  background-image: url('../img/bg3.jpg');
+  background-size: cover;
+  background-position: 0% 80%;
+  height: 250px
+}
+
+#feature h2 {
+  color: white;
+}
+
+#feature p {
+  color: white;
+}
 
 /* Sidebar */
 aside#sidebar {
@@ -187,11 +250,16 @@ ul#services li {
 
 footer {
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 180px;
   color: #fff;
   background-color: #e8491d;
   text-align: center;
+  height: 2.5rem;
+  width: 100%;
+
 }
+
+
 
 /* Media Queries */
 
